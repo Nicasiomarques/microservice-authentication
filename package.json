@@ -5,6 +5,7 @@
   "author": "nicasiomarques <nicasiomarques18@gmail.com>",
   "license": "MIT",
   "devDependencies": {
+    "@types/jest": "^27.0.1",
     "@types/node": "^16.7.1",
     "@typescript-eslint/eslint-plugin": "^4.29.2",
     "@typescript-eslint/parser": "^4.29.2",
@@ -14,6 +15,13 @@
     "eslint-plugin-node": "^11.1.0",
     "eslint-plugin-promise": "^5.1.0",
     "husky": "^7.0.1",
-    "lint-staged": "^11.1.2"
+    "jest": "^27.0.6",
+    "lint-staged": "^11.1.2",
+    "ts-jest": "^27.0.5",
+    "ts-node": "^10.2.1",
+    "typescript": "^4.3.5"
+  },
+  "scripts": {
+    "test": "jest"
   }
 }
