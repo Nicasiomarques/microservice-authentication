@@ -1,0 +1,7 @@
+{
+  "name": "clean-architecture-node",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "nicasiomarques <nicasiomarques18@gmail.com>",
+  "license": "MIT"
+}
