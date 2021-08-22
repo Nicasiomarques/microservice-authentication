@@ -25,8 +25,8 @@
   "scripts": {
     "start": "node dist/main/server.js",
     "test": "jest --passWithNoTests --silent --noStackTrace --runInBand",
-    "test:unit": "npm test -- --passWithNoTests --watch -c jest-unit-config.ts",
-    "test:integration": "npm test -- --passWithNoTests --watch -c jest-integration-config.ts",
+    "test:unit": "npm test -- --passWithNoTests -c jest-unit-config.ts",
+    "test:integration": "npm test -- --passWithNoTests -c jest-integration-config.ts",
     "test:staged": "npm test -- --findRelatedTests",
     "test:ci": "npm test -- --coverage",
     "prepare": "husky install",
