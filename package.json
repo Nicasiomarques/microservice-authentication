@@ -7,6 +7,7 @@
   "devDependencies": {
     "@types/jest": "^27.0.1",
     "@types/node": "^16.7.1",
+    "@types/validator": "^13.6.3",
     "@typescript-eslint/eslint-plugin": "^4.29.2",
     "@typescript-eslint/parser": "^4.29.2",
     "eslint": "^7.32.0",
@@ -31,5 +32,8 @@
     "test:ci": "npm test -- --coverage",
     "prepare": "husky install",
     "pre-commit": "lint-staged"
+  },
+  "dependencies": {
+    "validator": "^13.6.0"
   }
 }
