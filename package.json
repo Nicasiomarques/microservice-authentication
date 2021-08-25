@@ -34,6 +34,8 @@
     "pre-commit": "lint-staged"
   },
   "dependencies": {
+    "@types/bcrypt": "^5.0.0",
+    "bcrypt": "^5.0.1",
     "validator": "^13.6.0"
   }
 }
