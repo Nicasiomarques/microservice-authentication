@@ -149,10 +149,7 @@ describe('SignUp Controller', () => {
 
   it('Should return ServerError if emailValidator throws', async () => {
     const { sut, emailValidatorStub } = makeSut()
-    jest.spyOn(emailValidatorStub, 'isValid').mockImplementationOnce(() => {
-      throw new Error()
-    })
-
+    jest.spyOn(emailValidatorStub, 'isValid').mockImplementationOnce(() => { throw new Error() })
     const httpRequest = {
       body: {
         name: 'any_name',
@@ -187,10 +184,7 @@ describe('SignUp Controller', () => {
 
   it('Should return ServerError if addAccount.add throws', async () => {
     const { sut, addAccount } = makeSut()
-    jest.spyOn(addAccount, 'add').mockImplementationOnce(async () =>
-      Promise.reject(new Error())
-    )
-
+    jest.spyOn(addAccount, 'add').mockImplementationOnce(async () => Promise.reject(new Error()))
     const httpRequest = {
       body: {
         name: 'any_name',
