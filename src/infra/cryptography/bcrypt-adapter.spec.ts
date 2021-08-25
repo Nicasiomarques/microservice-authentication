@@ -28,4 +28,10 @@ describe('BcryptAdapter', () => {
     const promise = sut.encrypt('plaintext')
     expect(promise).rejects.toThrow()
   })
+
+  it('Should return hashed text if everything is ok', async () => {
+    const sut = makeSut()
+    const hash = await sut.encrypt('plaintext')
+    expect(hash).toBe('hash')
+  })
 })
