@@ -18,5 +18,6 @@
 		"jest"
 	],
 	"rules": {
+		"allowIndentationTabs": true
 	}
 }
