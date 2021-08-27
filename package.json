@@ -5,7 +5,10 @@
   "author": "nicasiomarques <nicasiomarques18@gmail.com>",
   "license": "MIT",
   "devDependencies": {
+    "@shelf/jest-mongodb": "^2.0.3",
+    "@types/bcrypt": "^5.0.0",
     "@types/jest": "^27.0.1",
+    "@types/mongodb": "^3.5.34",
     "@types/node": "^16.7.1",
     "@types/validator": "^13.6.3",
     "@typescript-eslint/eslint-plugin": "^4.29.2",
@@ -34,8 +37,8 @@
     "pre-commit": "lint-staged"
   },
   "dependencies": {
-    "@types/bcrypt": "^5.0.0",
     "bcrypt": "^5.0.1",
+    "mongodb": "^3.6.3",
     "validator": "^13.6.0"
   }
 }
