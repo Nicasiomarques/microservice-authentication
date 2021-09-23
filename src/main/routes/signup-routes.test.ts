@@ -12,7 +12,7 @@ describe('SignUp routes', () => {
   })
 
   beforeEach(async () => {
-    MongoHelpers.getCollection('accounts').deleteMany({})
+    (await MongoHelpers.getCollection('accounts')).deleteMany({})
   })
 
   it('should return an account on success', async () => {
