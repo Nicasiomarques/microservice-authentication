@@ -2,19 +2,25 @@ import { MongoClient, Collection } from 'mongodb'
 
 export const MongoHelpers = {
   mongoClient: null as MongoClient,
+  uri: null as string,
 
-  async connect (url: string): Promise<void> {
-    this.mongoClient = await MongoClient.connect(url, {
+  async connect (uri: string): Promise<void> {
+    this.uri = uri
+    this.mongoClient = await MongoClient.connect(uri, {
       useUnifiedTopology: true,
       useNewUrlParser: true
     })
   },
 
   async disconnect (): Promise<void> {
-    this.mongoClient.close()
+    await this.mongoClient.close()
+    this.mongoClient = null
   },
 
-  getCollection (name: string): Collection {
+  async getCollection (name: string): Promise<Collection> {
+    if (!this.mongoClient?.isConnected) {
+      await this.connect(this.uri)
+    }
     return this.mongoClient.db().collection(name)
   },
 
